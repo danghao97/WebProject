@@ -11,6 +11,7 @@
 - XML PHP Extension
 - Ctype PHP Extension
 - JSON PHP Extension
+- MySQL Server
 - NodeJS Latest Version
 ```
 npm -v
