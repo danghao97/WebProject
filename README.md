@@ -1,7 +1,16 @@
 # WebProject
 <p align="center">ENGLISH CHALLENGE</p>
 
-- PHP >= 7.1.3, php-mbstring, php-dom
+## Requirements
+- PHP >= 7.1.3
+- OpenSSL PHP Extension
+- PDO PHP Extension
+- Mbstring PHP Extension
+- Dom PHP Extension
+- Tokenizer PHP Extension
+- XML PHP Extension
+- Ctype PHP Extension
+- JSON PHP Extension
 - NodeJS Latest Version
 
 ## Step 1: Clone this project.
