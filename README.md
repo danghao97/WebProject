@@ -12,6 +12,11 @@
 - Ctype PHP Extension
 - JSON PHP Extension
 - NodeJS Latest Version
+```
+npm -v
+node -v
+Check php.ini file
+```
 
 ## Step 1: Clone this project.
 ## Step 2: Change directory (cd) to the cloned folder.
