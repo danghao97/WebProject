@@ -1,6 +1,10 @@
 vendor/
 node_modules/
 npm-debug.log
+/.idea
+/.vscode
+/.vagrant
+yarn-error.log
 
 # Laravel 4 specific
 bootstrap/compiled.php
