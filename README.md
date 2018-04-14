@@ -15,7 +15,7 @@
 - NodeJS Latest Version
 ```
 php -v
-php -i
+php -m
 mysql -V
 npm -v
 node -v
