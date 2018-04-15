@@ -15,7 +15,7 @@ class CreateChartTable extends Migration
     {
         Schema::create('chart', function (Blueprint $table) {
             $table->increments('idchart', 1);
-            $table->string('chartname');
+            $table->string('chartname', 11);
             $table->timestamps();
         });
     }
