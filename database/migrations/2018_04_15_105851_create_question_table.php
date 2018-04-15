@@ -15,15 +15,15 @@ class CreateQuestionTable extends Migration
     {
         Schema::create('question', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('idtype', 2)->unsigned();
-            $table->integer('idlevel', 2)->unsigned();
+            $table->integer('idtype')->length(2)->unsigned();
+            $table->integer('idlevel')->length(2)->unsigned();
             $table->text('content');
             $table->text('answer1');
             $table->text('answer2');
             $table->text('answer3');
             $table->text('answer4');
-            $table->integer('idanswer', 7)->unsigned();
-            $table->integer('idobject', 2)->unsigned();
+            $table->integer('idanswer')->length(7)->unsigned();
+            $table->integer('idobject')->length(2)->unsigned();
             $table->timestamps();
         });
     }

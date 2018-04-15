@@ -15,7 +15,7 @@ class CreateAnswerTable extends Migration
     {
         Schema::create('answer', function (Blueprint $table) {
             $table->increments('idanswer', 7);
-            $table->integer('solution', 1)->unsigned();
+            $table->integer('solution')->length(1)->unsigned();
             $table->text('explanation');
             $table->timestamps();
         });
