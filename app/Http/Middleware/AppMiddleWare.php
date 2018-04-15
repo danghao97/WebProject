@@ -17,7 +17,6 @@ class AppMiddleWare
      */
     public function handle($request, Closure $next)
     {
-        return $next($request);
         $num_users = count(\App\User::all());
         if ($num_users == 0) {
             return redirect()->route('config');

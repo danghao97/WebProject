@@ -36,3 +36,5 @@ Route::post('login', 'LoginController@DoLogin');
 Route::get('config', 'ConfigController@Config')->name('config');
 
 Route::post('config', 'ConfigController@Save');
+
+Route::get('logout', 'AppController@Logout');

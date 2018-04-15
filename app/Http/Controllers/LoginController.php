@@ -17,9 +17,9 @@ class LoginController extends Controller
     }
 
     public function DoLogin(Request $req) {
-        $username = $req->email;
+        $username = $req->username;
         $password = $req->password;
-        if (Auth::attempt(['email' => $username, 'password' => $password])) {
+        if (Auth::attempt(['username' => $username, 'password' => $password])) {
             return redirect()->route('/');
         } else {
             $errors = new MessageBag(['title' => 'Tài khoản hoặc mật khẩu không chính xác']);
