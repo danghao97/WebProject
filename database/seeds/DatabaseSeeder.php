@@ -12,13 +12,11 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
-        DB::table('chart')->insert([
-            'idchart' => 1,
-            'chartname' => 'Friend Chart'
-        ]);
-        DB::table('chart')->insert([
-            'idchart' => 2,
-            'chartname' => 'World Chart'
+        $this->call([
+            ChartSeeder::class,
+            LevelSeeder::class,
+            ObjectSeeder::class,
+            TypeSeeder::class
         ]);
     }
 }
