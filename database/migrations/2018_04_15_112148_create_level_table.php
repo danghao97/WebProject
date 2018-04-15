@@ -16,7 +16,7 @@ class CreateLevelTable extends Migration
         Schema::create('level', function (Blueprint $table) {
             $table->increments('idlevel', 2);
             $table->string('levelname');
-            $table->int('diem', 2);
+            $table->integer('diem', 2)->unsigned();
             $table->timestamps();
         });
     }
