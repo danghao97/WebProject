@@ -34,15 +34,15 @@
         <header>
             @include('layouts.Layout.Header')
         </header>
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-2">
                     @include('layouts.Layout.LeftSideBar')
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-8">
                     @include('layouts.Layout.Body')
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     @include('layouts.Layout.RightSideBar')
                 </div>
             </div>
