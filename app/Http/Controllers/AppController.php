@@ -13,7 +13,8 @@ class AppController extends Controller
     }
 
     public function Home() {
-        return view('pages.Home');
+        $friends = Auth::user()->Friends;
+        return view('pages.Home', ['friends' => $friends]);
     }
     
     public function Logout() {

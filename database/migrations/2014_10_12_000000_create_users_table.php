@@ -22,7 +22,6 @@ class CreateUsersTable extends Migration
             $table->string('birthday', 20);
             $table->string('gender', 5);
             $table->integer('friendnums')->length(5)->unsigned();
-            $table->string('idfriend', 10);
             $table->rememberToken();
             $table->timestamps();
         });

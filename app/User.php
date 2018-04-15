@@ -28,4 +28,8 @@ class User extends Authenticatable
     ];
 
     protected $username = 'username';
+
+    public function Friends() {
+        return $this->hasMany('App\Friend', 'idown', 'id');
+    }
 }

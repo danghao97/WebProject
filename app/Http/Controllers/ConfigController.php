@@ -24,8 +24,8 @@ class ConfigController extends Controller
         $user->birthday = '';
         $user->gender = 'Nam';
         $user->friendnums = '0';
-        $user->idfriend = '0';
         $user->save();
+        \Artisan::call('db:seed');
         $errors = new MessageBag(['title' => 'Đã tạo tài khoản quản trị hãy đăng nhập bằng tài khoản vừa tạo']);
         return redirect()->route('login')->withErrors($errors);
     }

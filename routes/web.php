@@ -38,3 +38,8 @@ Route::get('config', 'ConfigController@Config')->name('config');
 Route::post('config', 'ConfigController@Save');
 
 Route::get('logout', 'AppController@Logout');
+
+// Bắt hết các route còn lại và chuyển hướng về trang chủ
+Route::get('/{any}', function($any) {
+    return redirect()->route('/');
+});

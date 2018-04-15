@@ -6,6 +6,9 @@
         color: #cc10cc;
         background-color: #a1cccc;
     }
+    .leftbar-item {
+        padding: 3px;
+    }
 </style>
 <div class="card leftsidebar">
         <nav class="navbar-expand-md">
@@ -20,22 +23,22 @@
 
             <div class="collapse navbar-collapse" id="leftbar">
                 <nav class="nav flex-column nav-pills">
-                    <a class="nav-item nav-link active" href="#">
+                    <a class="nav-item nav-link active leftbar-item" href="#">
                         Dashboard
                     </a>
-                    <a class="nav-item nav-link" href="#">
+                    <a class="nav-item nav-link leftbar-item" href="#">
                         Orders
                     </a>
-                    <a class="nav-item nav-link" href="#">
+                    <a class="nav-item nav-link leftbar-item" href="#">
                         Products
                     </a>
-                    <a class="nav-item nav-link" href="#">
+                    <a class="nav-item nav-link leftbar-item" href="#">
                         Customers
                     </a>
-                    <a class="nav-item nav-link" href="#">
+                    <a class="nav-item nav-link leftbar-item" href="#">
                         Reports
                     </a>
-                    <a class="nav-item nav-link" href="#">
+                    <a class="nav-item nav-link leftbar-item" href="#">
                         Integrations
                     </a>
                 </nav>

@@ -13,10 +13,14 @@ class DatabaseSeeder extends Seeder
     {
         // $this->call(UsersTableSeeder::class);
         $this->call([
-            ChartSeeder::class,
-            LevelSeeder::class,
-            ObjectSeeder::class,
-            TypeSeeder::class
+            AnswerTableSeeder::class,
+            ChartTableSeeder::class,
+            UserTableSeeder::class,
+            FriendTableSeeder::class,
+            LevelTableSeeder::class,
+            ObjectTableSeeder::class,
+            QuestionTableSeeder::class,
+            TypeTableSeeder::class,
         ]);
     }
 }

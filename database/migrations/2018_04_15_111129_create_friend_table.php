@@ -14,8 +14,11 @@ class CreateFriendTable extends Migration
     public function up()
     {
         Schema::create('friend', function (Blueprint $table) {
-            $table->string('idfriend', 10);
-            $table->string('username', 30)->primary();
+            $table->integer('idown')->unsigned();
+            $table->foreign('idown')->references('id')->on('users')->onDelete('cascade');
+            $table->integer('iduser')->unsigned();
+            $table->foreign('iduser')->references('id')->on('users')->onDelete('cascade');
+            $table->primary(['idown', 'iduser']);
             $table->timestamps();
         });
     }
