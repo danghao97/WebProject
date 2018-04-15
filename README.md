@@ -132,6 +132,13 @@ npm install
 DB_DATABASE
 DB_USERNAME
 DB_PASSWORD
+
+MAIL_DRIVER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USERNAME=your_email
+MAIL_PASSWORD=your_password_or_app_password
+MAIL_ENCRYPTION=tls
 ```
 
 ## Step 9: Migrations:
