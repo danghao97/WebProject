@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <!--[if lt IE 9]>
             <script src="../../assets/js/ie8-responsive-file-warning.js"></script>
@@ -18,17 +18,18 @@
                 font-weight: bold;
             }
         </style>
-        <title>ENGLISH CHALLENGE - Configuration</title>
+        <title>ENGLISH CHALLENGE - Sign in</title>
     </head>
     <body>
         <div class="container">
             <div class="row">
                 <div class="col-md-4 m-auto">
                     <div class="card border-success">
-                        <div class="h5 card-header text-center text-success">
-                            CẤU HÌNH SERVER
-                        </div>
+                        <img class="card-img-top" src="{{asset('images/logo.png')}}" alt="Card image cap">
                         <div class="card-body">
+                            <div class="h3 card-title text-center text-success">
+                                Sign in
+                            </div>
                             @if ($errors->has('title'))
                                 <div class="alert alert-warning alert-dismissible fade show" role="alert">
                                     {{$errors->first('title')}}
@@ -37,30 +38,24 @@
                                     </button>
                                 </div>
                             @endif
-                            <form method='POST' enctype="multipart/form-data">
+                            <form method='POST'>
                                 {{ csrf_field() }}
                                 <div class="form-group">
-                                    <label for="fullname">Tên</label>
-                                    <input id="fullname" type="text" class="form-control form-control-sm" placeholder="Tên" name="fullname" value='{{old('fullname')}}'>
+                                    <label for="username">Username</label>
+                                    <input id="username" type="text" class="form-control" placeholder="Username" name="username" value='{{old('username')}}'>
                                 </div>
                                 <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <input id="email" type="text" class="form-control form-control-sm" placeholder="Email" name="email" value='{{old('email')}}'>
+                                    <label for="password">Password</label>
+                                    <input id="password" type="password" class="form-control" placeholder="Password" name="password">
                                 </div>
-                                <div class="form-group">
-                                    <label for="username">Tên đăng nhập</label>
-                                    <input id="username" type="text" class="form-control form-control-sm" placeholder="Username" name="username" value='{{old('username')}}'>
+                                <div class="form-group text-center">
+                                    <button type="submit" class="btn btn-primary">Sign in</button>
+                                    <a href="forgot" class="card-link ml-auto">Forgot password?</a>
                                 </div>
-                                <div class="form-group">
-                                    <label for="password">Mật khẩu</label>
-                                    <input id="password" type="password" class="form-control form-control-sm" placeholder="Mật khẩu" name="password">
-                                </div>
-                                <div class="form-group">
-                                    <label for="avatar">Ảnh đại diện</label>
-                                    <input type="file" class="form-control-file" id="avatar" name="avatar">
-                                </div>
-                                <button type="submit" class="btn btn-primary">SUBMIT</button>
                             </form>
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="signup" class="card-link">Create a new account</a>
                         </div>
                     </div>
                 </div>

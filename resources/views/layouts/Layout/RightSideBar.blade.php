@@ -9,7 +9,8 @@
             @php ($first = true)
             @foreach ($friends as $friend)
                 <a href="#" class="rightbar-item list-group-item list-group-item-action {!!($first ? ' active' : '')!!}">
-                        {{$friend->User->fullname}}
+                    <img class="img-fluid" src="data:image;base64,{{$user->avatar}}" alt="">
+                    {{$friend->User->fullname}}
                 </a>
                 @php ($first = false)
             @endforeach

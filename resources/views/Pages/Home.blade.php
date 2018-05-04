@@ -22,7 +22,7 @@
     </script>
     <div class="card">
         <div class="card-body">
-            
+            <img class="img-fluid" src="data:image;base64,{{$user->avatar}}" alt="">
         </div>
     </div>
 @endsection

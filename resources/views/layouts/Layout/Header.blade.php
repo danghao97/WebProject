@@ -18,7 +18,7 @@
                 </a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="http://{{$_SERVER['SERVER_NAME']}}/#">Xóa hết dữ liệu</a>
-                    <a class="dropdown-item" href="http://{{$_SERVER['SERVER_NAME']}}/logout">Logout</a>
+                    <a class="dropdown-item" href="http://{{$_SERVER['SERVER_NAME']}}/signout">Logout</a>
                 </div>
             </div>
         </div><!--/.nav-collapse -->

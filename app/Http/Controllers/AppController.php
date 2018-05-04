@@ -13,17 +13,22 @@ class AppController extends Controller
     }
 
     public function Home() {
-        $friends = Auth::user()->Friends;
-        return view('pages.Home', ['friends' => $friends]);
+        $user = Auth::user();
+        $friends = $user->Friends;
+        return view('pages.Home', ['user' => $user, 'friends' => $friends]);
     }
-    
-    public function Logout() {
-        $login = redirect()->route('login');
+
+    public function JSon() {
+        return '{["aa":12]}';
+    }
+
+    public function Signout() {
+        $signin = redirect()->route('signin');
         if (!Auth::check()) {
             $errors = new MessageBag(['title' => 'Bạn chưa đăng nhập vào hệ thống']);
-            return $login->withErrors($errors);
+            return $signin->withErrors($errors);
         }
         Auth::logout();
-        return $login;
+        return $signin;
     }
 }

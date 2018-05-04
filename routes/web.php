@@ -15,6 +15,31 @@ Route::get('/', 'AppController@Home')->name('/');
 
 Route::get('/home', 'AppController@Home');
 
+Route::get('/json', 'AppController@JSon');
+
+Route::get('signout', 'AppController@Signout');
+
+Route::get('config', 'ConfigController@Config')->name('config');
+
+Route::post('config', 'ConfigController@Save');
+
+Route::get('signin', 'SigninController@Signin')->name('signin');
+
+Route::post('signin', 'SigninController@DoSignin');
+
+Route::get('signup', 'SigninController@Signup');
+
+Route::post('signup', 'SigninController@DoSignup');
+
+Route::get('forgot', 'SigninController@Forgot');
+
+Route::post('forgot', 'SigninController@DoForgot');
+
+// Bắt hết các route còn lại và chuyển hướng về trang chủ
+Route::get('/{any}', function($any) {
+    return redirect()->route('/');
+});
+
 Route::get('gmail', function () {
     // $data để truyền dữ liệu cho template
     $data = array(
@@ -27,19 +52,4 @@ Route::get('gmail', function () {
         $message->to('danghaopro97@gmail.com', 'Người nhận')->subject('Chủ đề');
     });
     return '';
-});
-
-Route::get('login', 'LoginController@Login')->name('login');
-
-Route::post('login', 'LoginController@DoLogin');
-
-Route::get('config', 'ConfigController@Config')->name('config');
-
-Route::post('config', 'ConfigController@Save');
-
-Route::get('logout', 'AppController@Logout');
-
-// Bắt hết các route còn lại và chuyển hướng về trang chủ
-Route::get('/{any}', function($any) {
-    return redirect()->route('/');
 });
