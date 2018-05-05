@@ -10,7 +10,8 @@ class Friend extends Model
     protected $primaryKey = ['idown', 'iduser'];
     public $incrementing = false;
 
-    public function User() {
+    public function User()
+    {
         return $this->belongsTo('App\User', 'iduser', 'id');
     }
 }

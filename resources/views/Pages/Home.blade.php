@@ -1,28 +1,15 @@
-@extends('layouts.Layout.Layout')
-@section('title')
+@extends('Layouts.CustomLayout.Layout')
+
+@section('CustomTitle')
     HomePage
 @endsection
-@section('navitem')home @endsection
-@section('content')
-    <script type="text/javascript">
-        function playPause() {
-            var myVideo = $('#current');
-            if (myVideo[0].paused) {
-                myVideo[0].play();
-            } else{
-                myVideo[0].pause();
-            }
-        }
 
-        function fullScreen() {
-            var myVideo = $('#current');
-            console.log(myVideo[0]);
-            myVideo[0].webkitRequestFullScreen();
-        }
-    </script>
-    <div class="card">
-        <div class="card-body">
-            <img class="img-fluid" src="data:image;base64,{{$user->avatar}}" alt="">
+@section('NavBar')VanHanh @endsection
+
+@section('Content')
+    <div class="panel panel-info">
+        <div class="panel-body">
+            <img class="img-responsive" src="data:image;base64,{{$user->avatar}}" alt="">
         </div>
     </div>
 @endsection
