@@ -13,7 +13,7 @@ class SigninController extends Controller
     }
 
     public function Signin() {
-        return view('pages.Signin');
+        return view('Pages.Signin');
     }
 
     public function DoSignin(Request $req) {
@@ -28,7 +28,7 @@ class SigninController extends Controller
     }
 
     public function Signup() {
-        return view('pages.Signup');
+        return view('Pages.Signup');
     }
 
     public function DoSignup() {
@@ -36,7 +36,7 @@ class SigninController extends Controller
     }
 
     public function Forgot() {
-        return view('pages.Forgot');
+        return view('Pages.Forgot');
     }
 
     public function DoForgot() {

@@ -13,7 +13,7 @@ class ConfigController extends Controller
     }
 
     public function Config() {
-        return view('pages.config');
+        return view('Pages.Config');
     }
 
     public function Save(Request $req) {

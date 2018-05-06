@@ -15,7 +15,7 @@ class AppController extends Controller
     public function Home() {
         $user = Auth::user();
         $friends = $user->Friends;
-        return view('pages.Home', ['user' => $user, 'friends' => $friends]);
+        return view('Pages.Home', ['user' => $user, 'friends' => $friends]);
     }
 
     public function JSon() {
