@@ -33,4 +33,18 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Friend', 'idown', 'id');
     }
+
+    public function Chats($userid)
+    {
+        return \App\Chat::where(function($query) use ($userid) {
+            $query->where('idfrom', $this->id)->where('idto', $userid);
+        })->orWhere(function($query) use ($userid) {
+            $query->where('idto', $this->id)->where('idfrom', $userid);
+        })->get();
+    }
+
+    public function IsFriend($id)
+    {
+        return \App\Friend::where('idown', $this->id)->where('iduser', $id)->count();
+    }
 }

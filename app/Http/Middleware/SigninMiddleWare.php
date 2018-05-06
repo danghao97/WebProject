@@ -20,7 +20,7 @@ class SigninMiddleWare
         $num_users = count(\App\User::all());
         if ($num_users == 0) {
             $errors = new MessageBag(['title' => 'Bạn chưa có tài khoản quản trị nào, hãy tạo ngay']);
-            return redirect()->route('config')->withErrors($errors);
+            return redirect()->route('Config')->withErrors($errors);
         } else if (!Auth::check()) {
             return $next($request);
         } else {

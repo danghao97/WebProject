@@ -21,6 +21,8 @@ class CreateUsersTable extends Migration
             $table->string('fullname', 40);
             $table->string('birthday', 20);
             $table->string('gender', 5);
+            $table->integer('type')->length(1)->default('0');
+            $table->integer('score')->default('0');
             $table->integer('friendnums')->length(5)->unsigned();
             $table->rememberToken();
             $table->timestamps();

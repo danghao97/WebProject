@@ -29,6 +29,7 @@ class ConfigController extends Controller
         $user->birthday = '';
         $user->gender = 'Nam';
         $user->friendnums = '0';
+        $user->type = 1;
         // $avatar = addslashes($_FILES['avatar']['tmp_name']);
         // $user->avatar = base64_encode(file_get_contents($avatar));
         $avatar = $req->file('avatar');
@@ -36,6 +37,6 @@ class ConfigController extends Controller
         $user->save();
         \Artisan::call('db:seed');
         $errors = new MessageBag(['title' => 'Đã tạo tài khoản quản trị hãy đăng nhập bằng tài khoản vừa tạo']);
-        return redirect()->route('signin')->withErrors($errors);
+        return redirect()->route('Signin')->withErrors($errors);
     }
 }

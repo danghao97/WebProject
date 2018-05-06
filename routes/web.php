@@ -11,32 +11,44 @@
 |
 */
 
-Route::get('/', 'AppController@Home')->name('/');
+Route::get('/', 'AppController@Index')->name('/');
 
-Route::get('/home', 'AppController@Home');
+Route::get('Signout', 'AppController@Signout');
 
-Route::get('/json', 'AppController@JSon');
+Route::get('Chart', 'AppController@Chart')->name('Chart');
 
-Route::get('signout', 'AppController@Signout');
+Route::get('Start', 'AppController@Start');
 
-Route::get('config', 'ConfigController@Config')->name('config');
+Route::get('Message', 'AppController@Message');
 
-Route::post('config', 'ConfigController@Save');
+Route::get('Message/{userid}', 'AppController@Message')->name('Message');
 
-Route::get('signin', 'SigninController@Signin')->name('signin');
+Route::post('SendMessage/{userid}', 'AppController@SendMessage');
 
-Route::post('signin', 'SigninController@DoSignin');
+Route::get('AddFriend/{userid}', 'AppController@AddFriend');
 
-Route::get('signup', 'SigninController@Signup');
+Route::get('About', 'AppController@About');
 
-Route::post('signup', 'SigninController@DoSignup');
+Route::get('Admin', 'AppController@Admin');
 
-Route::get('forgot', 'SigninController@Forgot');
+Route::get('Config', 'ConfigController@Config')->name('Config');
 
-Route::post('forgot', 'SigninController@DoForgot');
+Route::post('Config', 'ConfigController@Save');
+
+Route::get('Signin', 'SigninController@Signin')->name('Signin');
+
+Route::post('Signin', 'SigninController@DoSignin');
+
+Route::get('Signup', 'SigninController@Signup');
+
+Route::post('Signup', 'SigninController@DoSignup');
+
+Route::get('Forgot', 'SigninController@Forgot');
+
+Route::post('Forgot', 'SigninController@DoForgot');
 
 // Bắt hết các route còn lại và chuyển hướng về trang chủ
-Route::get('/{any}', function($any) {
+Route::get('/{any}', function ($any) {
     return redirect()->route('/');
 });
 

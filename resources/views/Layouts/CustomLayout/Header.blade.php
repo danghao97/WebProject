@@ -21,7 +21,7 @@
                             <a class="dropdown-item" href="http://{{$_SERVER['SERVER_NAME']}}/#">Xóa hết dữ liệu</a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="http://{{$_SERVER['SERVER_NAME']}}/signout">Logout</a>
+                            <a class="dropdown-item" href="http://{{$_SERVER['SERVER_NAME']}}/Signout">Logout</a>
                         </li>
                     </ul>
                 </li>

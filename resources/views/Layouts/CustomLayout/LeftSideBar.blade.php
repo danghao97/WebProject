@@ -9,24 +9,26 @@
 
         <div class="collapse navbar-collapse" id="leftbar">
             <div class="list-group">
-                <a class="list-group-item active" href="#">
-                    Dashboard
+                <a id="HomeNav" class="list-group-item" href="/">
+                    Home
                 </a>
-                <a class="list-group-item" href="#">
-                    Orders
+                <a id="ChartNav" class="list-group-item" href="/Chart">
+                    Chart
                 </a>
-                <a class="list-group-item" href="#">
-                    Products
+                <a id="StartNav" class="list-group-item" href="/Start">
+                    Start Challenge
                 </a>
-                <a class="list-group-item" href="#">
-                    Customers
+                <a id="MessageNav" class="list-group-item" href="/Message">
+                    Message
                 </a>
-                <a class="list-group-item" href="#">
-                    Reports
+                <a id="AboutNav" class="list-group-item" href="/About">
+                    About
                 </a>
-                <a class="list-group-item" href="#">
-                    Integrations
-                </a>
+                @if ($user->type == 1)
+                    <a id="AdminNav" class="list-group-item" href="/Admin">
+                        Admin
+                    </a>
+                @endif
             </div>
         </div>
     </nav>

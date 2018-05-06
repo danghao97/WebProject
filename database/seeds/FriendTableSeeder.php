@@ -11,9 +11,9 @@ class FriendTableSeeder extends Seeder
      */
     public function run()
     {
-        $this->save(1, 2);
-        $this->save(1, 3);
-        $this->save(2, 3);
+        // $this->save(1, 2);
+        // $this->save(1, 3);
+        // $this->save(2, 3);
     }
 
     public function save($idown, $iduser) {
