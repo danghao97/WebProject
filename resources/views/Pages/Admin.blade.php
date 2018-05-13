@@ -24,61 +24,56 @@
             </div>
             <div class="col-md-9">
                 <div class="bs-example bs-example-tabs" data-example-id="togglable-tabs">
-                    <ul class="nav nav-tabs nav-justified" role="tablist">
+                    <ul class="nav nav-tabs nav-justified" role="tablist" id="All_Tabs">
                         <li role="presentation" class="active">
-                            <a href="#Tab_DoiTuong" role="tab" data-toggle="tab" aria-controls="Tab_DoiTuong" aria-expanded="true">Đối tượng</a>
+                            <a href="#Tab_Question" role="tab" data-toggle="tab" aria-controls="Tab_Question" aria-expanded="true">
+                                Question
+                            </a>
                         </li>
                         <li role="presentation">
-                            <a href="#Tab_Video" role="tab" data-toggle="tab" aria-controls="Tab_Video" aria-expanded="true">Video</a>
+                            <a href="#Tab_Level" role="tab" data-toggle="tab" aria-controls="Tab_Level" aria-expanded="true">
+                                Level
+                            </a>
                         </li>
                         <li role="presentation">
-                            <a href="#Tab_CapDo" role="tab" data-toggle="tab" aria-controls="Tab_CapDo" aria-expanded="true">Cấp độ</a>
+                            <a href="#Tab_Object" role="tab" data-toggle="tab" aria-controls="Tab_Object" aria-expanded="true">
+                                Object
+                            </a>
                         </li>
                         <li role="presentation">
-                            <a href="#Tab_LoaiDoiTuong" role="tab" data-toggle="tab" aria-controls="Tab_LoaiDoiTuong" aria-expanded="true">Loại đối tượng</a>
+                            <a href="#Tab_Type" role="tab" data-toggle="tab" aria-controls="Tab_Type" aria-expanded="true">
+                                Type
+                            </a>
                         </li>
                     </ul>
 
                     <div class="tab-content">
-                        <div class="tab-pane fade active in" role="tabpanel" id="Tab_Video">
+                        <div class="tab-pane fade active in" role="tabpanel" id="Tab_Question">
                             <div class="panel">
                                 <div class="panel-body">
-                                    <div class="col-md-9">
-                                        {{-- @include('Layouts.VanHanh.Video.DanhSach') --}}
-                                    </div>
-                                    <div class="col-md-3">
-                                        {{-- @include('Layouts.VanHanh.Video.Them') --}}
-                                    </div>
+                                    @include('Layouts.Admin.Question.Question')
+                                    @include('Layouts.Admin.Question.Add')
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade" role="tabpanel" id="Tab_DoiTuong">
+                        <div class="tab-pane fade" role="tabpanel" id="Tab_Level">
                             <div class="panel">
                                 <div class="panel-body">
-                                    <div class="col-md-9">
-                                        {{-- @include('Layouts.VanHanh.DoiTuong.DanhSach') --}}
-                                    </div>
-                                    <div class="col-md-3">
-                                        {{-- @include('Layouts.VanHanh.DoiTuong.Them') --}}
-                                    </div>
+                                    Level
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade" role="tabpanel" id="Tab_CapDo">
+                        <div class="tab-pane fade" role="tabpanel" id="Tab_Object">
                             <div class="panel">
                                 <div class="panel-body">
-                                    <div class="col-md-6 col-md-offset-3">
-                                        {{-- @include('Layouts.VanHanh.CapDo.CapDo') --}}
-                                    </div>
+                                    Object
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade" role="tabpanel" id="Tab_LoaiDoiTuong">
+                        <div class="tab-pane fade" role="tabpanel" id="Tab_Type">
                             <div class="panel">
                                 <div class="panel-body">
-                                    <div class="col-md-6 col-md-offset-3">
-                                        {{-- @include('Layouts.VanHanh.LoaiDoiTuong.LoaiDoiTuong') --}}
-                                    </div>
+                                    Type
                                 </div>
                             </div>
                         </div>
@@ -97,7 +92,9 @@
         $(document).ready(() => {
             var navitem = $('#AdminNav');
             navitem.addClass('active');
+
+            $('#All_Tabs a[href="#{{$tab_show}}"]').tab('show')
         });
     </script>
-    @yield('CustomJS')
+    @yield('AdminJS')
 @endsection

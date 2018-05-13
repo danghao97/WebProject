@@ -7,42 +7,31 @@
 @section('NavBar')ChartNav @endsection
 
 @section('Content')
-    <div class="panel panel-info">
-        <div class="panel-body">
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th>STT</th>
-                        <th>Fullname</th>
-                        <th>Score</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($users as $key => $value)
-                        <tr>
-                            <td>{{$key}}</td>
-                            <td>{{$value->fullname}}</td>
-                            <td>{{$value->score}}</td>
-                            <td>
-                                @if ($user->IsFriend($value->id))
-                                    <a href="/Message/{{$value->id}}" role="button" class="btn btn-primary btn-xs">
-                                        Message
-                                    </a>
-                                @elseif ($user->id != $value->id)
-                                    <a href="/AddFriend/{{$value->id}}" role="button" class="btn btn-primary btn-xs">
-                                        Add Friend
-                                    </a>
-                                @elseif ($user->id == $value->id)
-                                    <a href="#" role="button" class="btn btn-primary btn-xs disabled">
-                                        You
-                                    </a>
-                                @endif
-                            </td>
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table>
+    <div class="bs-example bs-example-tabs" data-example-id="togglable-tabs">
+        <ul class="nav nav-tabs nav-justified" role="tablist">
+            <li role="presentation" class="active">
+                <a href="#Tab_Friend" role="tab" data-toggle="tab" aria-controls="Tab_Friend" aria-expanded="true">Friend Chart</a>
+            </li>
+            <li role="presentation">
+                <a href="#Tab_World" role="tab" data-toggle="tab" aria-controls="Tab_World" aria-expanded="true">World Chart</a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane fade active in" role="tabpanel" id="Tab_Friend">
+                <div class="panel">
+                    <div class="panel-body">
+                        @include('Layouts.Chart.Friend')
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" role="tabpanel" id="Tab_World">
+                <div class="panel">
+                    <div class="panel-body">
+                        @include('Layouts.Chart.World')
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 @endsection

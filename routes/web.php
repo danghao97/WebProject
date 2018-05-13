@@ -19,6 +19,8 @@ Route::get('Chart', 'AppController@Chart')->name('Chart');
 
 Route::get('Start', 'AppController@Start');
 
+Route::post('Answer', 'AnswerController@Answer');
+
 Route::get('Message', 'AppController@Message');
 
 Route::get('Message/{userid}', 'AppController@Message')->name('Message');
@@ -29,7 +31,11 @@ Route::get('AddFriend/{userid}', 'AppController@AddFriend');
 
 Route::get('About', 'AppController@About');
 
-Route::get('Admin', 'AppController@Admin');
+Route::prefix('Admin')->group(function () {
+    Route::get('/', 'AppController@Admin')->name('Admin');
+});
+
+Route::get('Admin2', 'AppController@Admin2');
 
 Route::get('Config', 'ConfigController@Config')->name('Config');
 

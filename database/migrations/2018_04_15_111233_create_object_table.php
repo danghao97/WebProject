@@ -17,6 +17,7 @@ class CreateObjectTable extends Migration
             $table->increments('idobject');
             $table->text('description');
             $table->string('objectname', 100);
+            $table->integer('totalscore');
             $table->timestamps();
         });
     }

@@ -19,15 +19,15 @@ class CreateQuestionTable extends Migration
             $table->foreign('idtype')->references('idtype')->on('type')->onDelete('cascade');
             $table->integer('idlevel')->length(2)->unsigned();
             $table->foreign('idlevel')->references('idlevel')->on('level')->onDelete('cascade');
+            $table->integer('idobject')->length(2)->unsigned();
+            $table->foreign('idobject')->references('idobject')->on('object')->onDelete('cascade');
             $table->text('content');
             $table->text('answer1');
             $table->text('answer2');
             $table->text('answer3');
             $table->text('answer4');
-            $table->integer('idanswer')->length(7)->unsigned();
-            $table->foreign('idanswer')->references('idanswer')->on('answer')->onDelete('cascade');
-            $table->integer('idobject')->length(2)->unsigned();
-            $table->foreign('idobject')->references('idobject')->on('object')->onDelete('cascade');
+            $table->integer('answer');
+            $table->text('explanation');
             $table->timestamps();
         });
     }
