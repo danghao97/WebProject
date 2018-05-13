@@ -32,6 +32,11 @@ class SigninController extends Controller
     }
 
     public function DoSignup(Request $req) {
+        $checkemail = \App\User::where('email', $req->email)->first();
+        if ($checkemail != null) {
+            $errors = new MessageBag(['title' => 'Email đã tồn tại, hãy nhập email khác']);
+            return redirect()->back()->withInput()->withErrors($errors);
+        }
         $checkuser = \App\User::where('username', $req->username)->first();
         if ($checkuser != null) {
             $errors = new MessageBag(['title' => 'Tên đăng nhập đã tồn tại, hãy chọn tên đăng nhập khác']);
