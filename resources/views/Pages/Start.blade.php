@@ -118,7 +118,7 @@
                 if (selected === undefined) {
                     $('#AlertModalLabel')[0].innerHTML = 'ERROR';
                     $('#AlertModalBody')[0].innerHTML = 'Chua chon dap an';
-                    $('#modalalert').modal({backdrop: 'static', keyboard: false});
+                    $('#modalalert').modal();
                     return;
                 }
                 e.preventDefault();
