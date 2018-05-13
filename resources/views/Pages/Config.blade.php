@@ -25,7 +25,7 @@
                             {{ csrf_field() }}
                             <div class="form-group">
                                 <label for="fullname">Tên</label>
-                                <input id="fullname" type="text" class="form-control  input-sm" placeholder="Tên" name="fullname" value='{{old('fullname')}}' maxlength="12">
+                                <input id="fullname" type="text" class="form-control  input-sm" placeholder="Tên" name="fullname" value='{{old('fullname')}}' maxlength="10">
                             </div>
                             <div class="form-group">
                                 <label for="email">Email</label>
