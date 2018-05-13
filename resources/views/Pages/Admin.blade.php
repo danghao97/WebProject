@@ -31,6 +31,11 @@
                             </a>
                         </li>
                         <li role="presentation">
+                            <a href="#Tab_Type" role="tab" data-toggle="tab" aria-controls="Tab_Type" aria-expanded="true">
+                                Type
+                            </a>
+                        </li>
+                        <li role="presentation">
                             <a href="#Tab_Level" role="tab" data-toggle="tab" aria-controls="Tab_Level" aria-expanded="true">
                                 Level
                             </a>
@@ -38,11 +43,6 @@
                         <li role="presentation">
                             <a href="#Tab_Object" role="tab" data-toggle="tab" aria-controls="Tab_Object" aria-expanded="true">
                                 Object
-                            </a>
-                        </li>
-                        <li role="presentation">
-                            <a href="#Tab_Type" role="tab" data-toggle="tab" aria-controls="Tab_Type" aria-expanded="true">
-                                Type
                             </a>
                         </li>
                     </ul>
@@ -56,24 +56,27 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="tab-pane fade" role="tabpanel" id="Tab_Type">
+                            <div class="panel">
+                                <div class="panel-body">
+                                    @include('Layouts.Admin.Type.Type')
+                                    @include('Layouts.Admin.Type.Add')
+                                </div>
+                            </div>
+                        </div>
                         <div class="tab-pane fade" role="tabpanel" id="Tab_Level">
                             <div class="panel">
                                 <div class="panel-body">
-                                    Level
+                                    @include('Layouts.Admin.Level.Level')
+                                    @include('Layouts.Admin.Level.Add')
                                 </div>
                             </div>
                         </div>
                         <div class="tab-pane fade" role="tabpanel" id="Tab_Object">
                             <div class="panel">
                                 <div class="panel-body">
-                                    Object
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" role="tabpanel" id="Tab_Type">
-                            <div class="panel">
-                                <div class="panel-body">
-                                    Type
+                                    @include('Layouts.Admin.Object.Object')
+                                    @include('Layouts.Admin.Object.Add')
                                 </div>
                             </div>
                         </div>

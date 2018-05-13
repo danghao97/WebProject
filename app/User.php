@@ -41,7 +41,7 @@ class User extends Authenticatable
 
     public function MyObject()
     {
-        $objects = \App\MyObject::all();
+        $objects = \App\MyObject::orderBy('totalscore')->get();
         $myobject = null;
         $min = 0;
         foreach ($objects as $value) {
@@ -59,7 +59,7 @@ class User extends Authenticatable
         $time = time() - 30;
         $time = date('Y-m-d H:i:s', $time);
         $LastQuestion = \App\UserChallenge::where('iduser', $this->id)
-                        ->where('answered', '<>', 0)
+                        ->where('answered', '==', 0)
                         ->where('created_at', '>', $time)
                         ->orderBy('id', 'desc')->first();
         return $LastQuestion;

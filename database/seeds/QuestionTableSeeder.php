@@ -11,7 +11,7 @@ class QuestionTableSeeder extends Seeder
      */
     public function run()
     {
-        $this->save(2, 2, 1, 'Cau hoi thu nhat', 'Dap an thu nhat', 'Dap an thu 2', 'Dap an thu 3', 'Dap an thu 4', 1, 'Dap an la cau tra loi');
+        // $this->save(2, 2, 1, 'Cau hoi thu nhat', 'Dap an thu nhat', 'Dap an thu 2', 'Dap an thu 3', 'Dap an thu 4', 1, 'Dap an la cau tra loi');
     }
 
     public function save($idtype, $idlevel, $idobject, $content, $answer1, $answer2, $answer3, $answer4, $answer, $explanation) {

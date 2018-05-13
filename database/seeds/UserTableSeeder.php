@@ -11,9 +11,9 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
-        $this->save('email1@gmail', 'user1', 'pass1', 'fullname1');
-        $this->save('email2@gmail', 'user2', 'pass2', 'fullname2');
-        $this->save('email3@gmail', 'user3', 'pass3', 'fullname3');
+        // $this->save('email1@gmail', 'user1', 'pass1', 'fullname1');
+        // $this->save('email2@gmail', 'user2', 'pass2', 'fullname2');
+        // $this->save('email3@gmail', 'user3', 'pass3', 'fullname3');
     }
 
     public function save($email, $username, $password, $fullname) {

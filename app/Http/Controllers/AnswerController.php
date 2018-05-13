@@ -18,9 +18,9 @@ class AnswerController extends Controller
         if ($LastQuestion == null) {
             return json_encode(['code' => 1]);
         }
-        // answer == 0 => answered
-        if ($LastQuestion->answered == 0 || $LastQuestion->Question->answer != $req->answer) {
-            $LastQuestion->answered = 0;
+        // answer != 0 => answered
+        if ($LastQuestion->answered != 0 || $LastQuestion->Question->answer != $req->answer) {
+            $LastQuestion->answered = -1;
             $LastQuestion->save();
             return json_encode(['code' => 2]);
         }

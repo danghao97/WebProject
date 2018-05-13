@@ -19,15 +19,14 @@ class CreateUsersTable extends Migration
             $table->string('username', 30)->unique();
             $table->string('password');
             $table->string('fullname', 40);
-            $table->string('birthday', 20);
-            $table->string('gender', 5);
+            $table->string('birthday', 20)->nullable();
+            $table->string('gender', 5)->nullable();
             $table->integer('type')->length(1)->default('0');
             $table->integer('score')->default('0');
-            $table->integer('friendnums')->length(5)->unsigned();
             $table->rememberToken();
             $table->timestamps();
         });
-        DB::statement("ALTER TABLE users ADD avatar LONGBLOB AFTER friendnums");
+        DB::statement("ALTER TABLE users ADD avatar LONGBLOB AFTER score");
     }
 
     /**

@@ -26,9 +26,6 @@ class ConfigController extends Controller
         $user->email = $req->email;
         $user->username = $req->username;
         $user->password = bcrypt($req->password);
-        $user->birthday = '';
-        $user->gender = 'Nam';
-        $user->friendnums = '0';
         $user->type = 1;
         // $avatar = addslashes($_FILES['avatar']['tmp_name']);
         // $user->avatar = base64_encode(file_get_contents($avatar));

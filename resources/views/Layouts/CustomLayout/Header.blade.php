@@ -17,9 +17,9 @@
                         {{$user->fullname}} <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li>
+                        {{-- <li>
                             <a class="dropdown-item" href="http://{{$_SERVER['SERVER_NAME']}}/#">Xóa hết dữ liệu</a>
-                        </li>
+                        </li> --}}
                         <li>
                             <a class="dropdown-item" href="http://{{$_SERVER['SERVER_NAME']}}/Signout">Logout</a>
                         </li>

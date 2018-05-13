@@ -34,12 +34,12 @@
                             </div>
                             <div class="form-group text-center">
                                 <button type="submit" class="btn btn-primary">Sign in</button>
-                                <a href="forgot" class="card-link ml-auto">Forgot password?</a>
+                                {{-- <a href="forgot" class="card-link ml-auto">Forgot password?</a> --}}
                             </div>
                         </form>
                     </div>
                     <div class="card-footer text-center">
-                        <a href="signup" class="card-link">Create a new account</a>
+                        <a href="Signup" class="card-link">Create a new account</a>
                     </div>
                 </div>
             </div>

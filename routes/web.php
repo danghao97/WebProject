@@ -33,6 +33,20 @@ Route::get('About', 'AppController@About');
 
 Route::prefix('Admin')->group(function () {
     Route::get('/', 'AppController@Admin')->name('Admin');
+
+    Route::post('AddQuestion', 'AppController@AddQuestion');
+
+    Route::post('AddType', 'AppController@AddType');
+
+    Route::post('AddLevel', 'AppController@AddLevel');
+
+    Route::post('AddObject', 'AppController@AddObject');
+
+    Route::get('DelType/{id}', 'AppController@DelType');
+
+    Route::get('DelLevel/{id}', 'AppController@DelLevel');
+
+    Route::get('DelObject/{id}', 'AppController@DelObject');
 });
 
 Route::get('Admin2', 'AppController@Admin2');
