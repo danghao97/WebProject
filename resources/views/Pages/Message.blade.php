@@ -54,3 +54,11 @@
         </div>
     </div>
 @endsection
+
+@section('CustomJS')
+    <script type="text/javascript">
+        $(document).ready(() => {
+            $('#contentchat').focus();
+        });
+    </script>
+@endsection

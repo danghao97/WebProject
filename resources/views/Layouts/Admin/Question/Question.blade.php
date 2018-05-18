@@ -1,8 +1,9 @@
 <div class="panel panel-info">
     <div class="panel-heading">
-        <h3 class="panel-title">List Question</h3>
+        <h3 class="panel-title">List Question <small>(tổng số {{count(\App\Question::all())}})</small></h3>
     </div>
     <div class="panel-body">
+        {!!$questions->links()!!}
         @foreach ($questions as $question)
             <div class="panel panel-info">
                 <div class="panel-body">
@@ -28,7 +29,7 @@
                         <label>D:</label> {{$question->answer4}}
                     </div>
                     <div class="col-md-12">
-                        <label>Explanation:</label> {{$question->explanation}}
+                        <label>Explanation:</label> {!!str_replace("\r\n", "<br>", $question->explanation)!!}
                     </div>
                 </div>
             </div>

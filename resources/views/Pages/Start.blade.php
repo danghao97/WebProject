@@ -85,7 +85,7 @@
                                     break;
                                 case 3:// True
                                     $('#AlertModalLabel')[0].innerHTML = 'True';
-                                    $('#AlertModalBody')[0].innerHTML = result['explanation'] + '<br>Bạn nhận được ' + result['score'] + ' điểm';
+                                    $('#AlertModalBody')[0].innerHTML = 'Explanation: ' + result['explanation'] + '<br>Bạn nhận được ' + result['score'] + ' điểm';
                                     break;
                             }
                             $('#modalalert').modal({backdrop: 'static', keyboard: false});
