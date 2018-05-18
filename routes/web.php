@@ -31,6 +31,18 @@ Route::get('AddFriend/{userid}', 'AppController@AddFriend');
 
 Route::get('About', 'AppController@About');
 
+Route::get('FindOpponent','ChallengeController@findOpponent');
+
+Route::post('StartChallenge','ChallengeController@startChallenge');
+
+Route::post('FinishTest','ChallengeController@finishTest');
+
+Route::get('Notification','ChallengeController@getNoti');
+
+Route::post('AcceptChallenge','ChallengeController@acceptChallenge');
+
+Route::post('FinishAccept','ChallengeController@finishAccept');
+
 Route::prefix('Admin')->group(function () {
     Route::get('/', 'AppController@Admin')->name('Admin');
 
