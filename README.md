@@ -1,6 +1,11 @@
 # WebProject
 <p align="center">ENGLISH CHALLENGE</p>
 
+## About team
+- Phạm Duy Anh
+- Nguyễn Đăng Hào
+- Đào Đức Minh
+
 ## Requirements
 - PHP Version >= 7.1.3
 - OpenSSL PHP Extension
