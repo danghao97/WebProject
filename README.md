@@ -2,9 +2,9 @@
 <p align="center">ENGLISH CHALLENGE</p>
 
 ## About team
-- Phạm Duy Anh
-- Nguyễn Đăng Hào
-- Đào Đức Minh
+- <a href="https://github.com/anhpd1004">Phạm Duy Anh</a>
+- <a href="https://github.com/danghao97">Nguyễn Đăng Hào</a>
+- <a href="https://github.com/daoducminh">Đào Đức Minh</a>
 
 ## Requirements
 - PHP Version >= 7.1.3
